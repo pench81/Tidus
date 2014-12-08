@@ -1,0 +1,42 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<header class="bk-header">
+    <div class="wrapper clearfix">
+      <div class="companyheader clearfix">
+          {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+          {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+      </div>
+      {{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
+    </div>
+</header>
+
+<section>
+    {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"LOREM IPSUM","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
+</section>
+
+<div class="main-zone">
+  <div class="wrapper clearfix">
+      {{zone('main')|raw}}
+  </div>  
+</div>
+
+<footer class="bk-footer">
+    <div class="wrapper clearfix">
+        <div class="responsivecolumns columns-two-50-50">
+            <div class="column columns-two-left">
+                {{widget('content', 'footercolumn1content1', {"content":"<h3>Lorem Ip Soda</h3><p>Integer a Tortor Dui. Nullam nec ante mi. Morbi sodales urna sit amet mauris elementum quis rutrum lacus gravida. Proin feugia libero quis.</p>"})|raw}}
+                {{widget('profile', 'footercolumn1profilesocialicons', { 'profileType' : 'socialicons' })|raw}}
+            </div>
+            <div class="column columns-two-right">
+                {{widget('content', 'footercolumn2content1', {"content":"<h3>Aliquam Sodales</h3>"})|raw}}
+                {{widget('profile', 'footercolumn2profiletwitter', { 'profileType':'twitter', 'twitter':'profile'})|raw}}
+                {{widget('profile', 'footercolumn2profilecopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+{% endblock %}
