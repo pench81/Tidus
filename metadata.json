@@ -1,7 +1,7 @@
 {
 	"name":"tidus",
-	"thumbnail":"hatch.png",
-	"screenshot":"hatch.png",
+	"thumbnail":"tidus.png",
+	"screenshot":"tidus.png",
 	"templateType":"standard",
     "pageTypes":["home"],
     "tags": {
